@@ -1,0 +1,26 @@
+http://localhost:7070/take?playerId=P1&points=300
+http://localhost:7070/fund?playerId=P2&points=300
+http://localhost:7070/announceTournament?tournamentId=1&deposit=1000
+http://localhost:7070/joinTournament?tournamentId=1&playerId=P1&backerId=P2&backerId=P3&backerId=P4
+http://localhost:7070/joinTournament?tournamentId=1&playerId=P5
+http://localhost:7070/resultTournament
+http://localhost:7070/balance?playerId=P1
+http://localhost:7070/reset
+
+Test
+http://localhost:7070/fund?playerId=P1&points=300
+http://localhost:7070/fund?playerId=P2&points=300
+http://localhost:7070/fund?playerId=P3&points=300
+http://localhost:7070/fund?playerId=P4&points=500
+http://localhost:7070/fund?playerId=P5&points=1000
+
+
+http://localhost:7070/announceTournament?tournamentId=1&deposit=1000
+
+http://localhost:7070/joinTournament?tournamentId=1&playerId=P5
+http://localhost:7070/joinTournament?tournamentId=1&playerId=P1&backerId=P2&backerId=P3G&backerId=P4
+
+http://localhost:7070/resultTournament
+{"winners": [{"playerId": "P1", "prize": 2000}]}
+
+http://localhost:7070/reset
